@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<s>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Click me</button>
+    <script>
+        let cars = [
+            {model: "Panda", marka: "Fiat", godina: 1960},
+            {model: "Vesta", marka: "Lada", godina: 2016},
+            {model: "Arizzo 7", marka: "Cherry", godina: 2015},
+        ]
+
+        let mapCars = cars.map((car) => {
+            let kola = car.marka + " " + car.godina;
+            return kola;
+        })
+        console.log(mapCars);
+
+        let result = cars.filter((car) => car.godina > 2000);
+        console.log(result);
+        let oneCar = cars.find((car) => car.marka === 'Lada');
+        console.log(oneCar);
+
+        const mashini = {
+            model: "Astra",
+            marka: "Opel",
+            godina: 2000,
+            doors: {
+                door1: "frontleft",
+                door2: "frontright",
+                door3: "backleft",
+                door4: "backright",
+            }
+        }
+
+
+        //const { model, marka, godina} = mashini;
+        const {godina, doors: {door2}} = mashini;
+        console.log(godina + " " + door2);
+
+        if (godina < 2010){
+            console.log("You need a new car!");
+        } else {
+            console.log("You don't need a new car!");
+        }
+    </script>
+</body>
+</html>

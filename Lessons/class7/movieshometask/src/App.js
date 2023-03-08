@@ -20,13 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Movies Page</h1>
-      </header>
-      <MovieContext.Provider value={{ movie }}>
+      <MovieContext.Provider value={movie}>
         <Movie />
       </MovieContext.Provider>
-      ;
     </div>
   );
 }

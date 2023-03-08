@@ -15,7 +15,7 @@ export const MovieVisual = () => {
               src={image}
               key={i}
               alt="Where the Crawdads Sing"
-              style={{ width: 450, height: 300 }}
+              style={{ width: 450, height: 310 }}
             />
           );
         })}

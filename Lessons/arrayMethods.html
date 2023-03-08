@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<s>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Click me</button>
+    <script>
+        let users = [
+            {firstName: "Susan", lastName: "Steward", age: 14},
+            {firstName: "Ivan", lastName: "Kent", age: 27},
+            {firstName: "Shan", lastName: "Lucky", age: 69},
+        ]
+
+        let mapUsers = users.map((user) => {
+            let fullName = user.firstName + " " + user.lastName;
+            return fullName;
+        })
+        console.log(mapUsers);
+
+        let result = users.filter((user) => user.age > 20);
+        console.log(result);
+        let onePerson = users.find((person) => person.firstName === 'Martin');
+        console.log(onePerson);
+
+        let fruits = ["mango", "apples", "lemons", "orange"];
+        let fruit1 = fruits[0];
+        let fruit2 = fruits[1];
+        let [fruitOne,, fruitThree] = fruits;
+        console.log(fruitOne, fruitThree);
+
+        const human = {
+            name: "Vika",
+            lastName: "Shat",
+            age: 33,
+            hobbies: {
+                hobby1: "writing",
+                hobby2: "cross-stitching",
+                hobby3: "flute"
+            }
+        }
+
+        const { name, age, hobbies: {hobby2}} = human;
+
+        if (age > 27){
+            console.log("Adult");
+        } else {
+            console.log(name);
+        }
+
+        let fruits2 = ["mango", "apples", "lemons", "orange"];
+        let [firstFruite, ...rest] = fruits2;
+        console.log(rest);
+
+        let pets = ["dog", "cat"];
+        let wildAnimals = ["lion", "wolf", "tiger"];
+        let animals = [pets, animals];
+        console.log(animals); //все будут в одном массиве, как два отдельных массива
+
+        let animals2 = [...pets, ...animals];
+        console.log(animals2); //один массив со всеми элементами из 2х других массивов
+
+    </script>
+</body>
+</html>
